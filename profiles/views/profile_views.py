@@ -9,6 +9,7 @@ from profiles.serializers import ProfileSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from profiles.views.send_sms import send_sms
 
 class CreateProfile(CreateAPIView):
     serializer_class = ProfileSerializer
@@ -18,6 +19,10 @@ class CreateProfile(CreateAPIView):
         self.owner = ModifiedUser.objects.get(id=request.user.id)
         if Profile.objects.filter(owner=self.owner):
             return JsonResponse({"detail": "Same user cannot own more than one profile"}, status=409)
+        else:
+            profile_data = request.data
+            print("Profile data was received: ", profile_data)
+            send_sms(profile_data['phone_num'], profile_data['name'])
         return super().create(request, *args, **kwargs)
 
     def perform_create(self, serializer):

@@ -19,6 +19,7 @@ from storages.backends.s3boto3 import S3Boto3Storage
 
 
 
+
 from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -196,5 +197,7 @@ AWS_S3_REGION_NAME = 'us-east-1'
 class MediaStorage(S3Boto3Storage):
     location = 'media'
     file_overwrite = False
+
+    
 
 DEFAULT_FILE_STORAGE = 'backend.settings.MediaStorage'

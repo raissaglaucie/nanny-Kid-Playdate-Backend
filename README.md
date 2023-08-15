@@ -44,7 +44,7 @@ API Communication: The front end and back end communicate via RESTful APIs. This
 User Authentication: I am using Token-based Authentication to manage user authentication and ensure secure access to the application.
 
 
-# Interaction Flow:
+# Interaction Flow
 
 1 - A user interacts with the web application through the front-end user interface.
 

@@ -7,23 +7,33 @@
 
 The Nanny Kid Playdate is a web application that facilitates connecting and arranging playdates for nannies. The application allows users to create profiles, search for other users, follow and unfollow other nannies, post pictures with descriptions about the visited place, and comment on other users' profiles. Users can manage their profiles by providing essential information about themselves and their nanny kids. The project focuses on creating a user-friendly and personalized platform to enhance the playdate experience for nannies and promote social interaction among children.
 
-# Installation-Usage
+# Setting Up and Configuration
 
-This project's user interface is constructed using React, a JavaScript library designed to streamline the development of efficient and reusable front-end components. Complemented by Chakra UI, the project leverages features and a virtual Document Object Model (DOM) to optimize the updating and rendering of user interface elements. This optimization leads to an enhanced and seamless user interaction.
+The heart of this project's backend is constructed using Django and Rest Framework, a robust web framework powered by Python. The backend serves as the core engine of the web application, managing data processing, communication with the database, and delivering data to the frontend.
 
-Follow these steps to set up both the backend and frontend repositories for the project in a dedicated folder named "nanny-kid-playdate":
+To initiate the project locally, adhere to the subsequent instructions for installing and configuring the Django backend for the RestAPI:
 
 1 - Create a new directory to accommodate the backend and frontend repositories: make a directory named "nanny-kid-playdate."
 
 2 - Move into the newly created project folder: go to the "nanny-kid-playdate" directory using the command line.
 
-3 - Clone the frontend repository by copying its content from: https://github.com/raissaglaucie/nanny-kid-playdate-frontend.
+3 - Generate a fresh virtual environment: create a new virtual environment using the command "python3 -m venv venv."
 
-4 - Install the necessary dependencies using npm: execute the command "npm install" to acquire the required packages.
+4 - Activate the virtual environment: enable the newly created virtual environment by executing "source venv/bin/activate."
 
-5 - Initiate the development server: launch the server for development purposes using the command "npm start."
+5 - Clone the backend repository: duplicate the backend repository content by copying from the following link: https://github.com/raissaglaucie/nanny-kid-playdate-backend.git.
 
-6 - Access the locally hosted web application: open your web browser and enter the address http://127.0.0.1:8000/ to interact with the web application on your local machine.
+6 - stall the necessary dependencies: acquire the required packages by executing the command "pip install -r requirements.txt."
+
+7 - Configure the database and apply migrations: initialize the database configuration and implement migrations using the commands "python3 manage.py migrate" or "python3 manage.py makemigrations."
+
+8 - Launch the development server: start the development server using the command "python3 manage.py runserver."
+
+9 - Access the web application locally: open your web browser and enter the address http://127.0.0.1:8000/ to interact with the web application on your local machine.
+
+These steps will facilitate the installation and setup of the Django backend for the RestAPI, allowing you to explore the project locally.
+
+
 
 
 # Architecture Diagram
@@ -39,26 +49,26 @@ Backend: The backend, built using Django, handles the business logic and interac
 
 Database: PostgreSQL, our chosen database system, stores all the necessary data for the application. It's accessed by the backend for data manipulation.
 
-API Communication: The front end and back end communicate via RESTful APIs. This allows them to exchange data and requests seamlessly.
+API Communication: The frontend and backend communicate via RESTful APIs. This allows them to exchange data and requests seamlessly.
 
 User Authentication: I am using Token-based Authentication to manage user authentication and ensure secure access to the application.
 
 
 # Interaction Flow
 
-1 - A user interacts with the web application through the front-end user interface.
+1 - A user interacts with the web application through the frontend user interface.
 
-2 - The front end requests the backend API to fetch or manipulate data.
+2 - The frontend requests the backend API to fetch or manipulate data.
 
-3 - The backend processes these requests, interacts with the database if needed, and sends back the appropriate response to the front end.
+3 - The backend processes these requests, interacts with the database if needed, and sends back the appropriate response to the frontend.
 
 4 - User authentication and authorization are managed by Token-based Authentication, ensuring secure access to the application's features.
 
-5 - Data retrieved from the database is presented to the user through the front end's UI.
+5 - Data retrieved from the database is presented to the user through the frontend's UI.
 
 # Accessing the Deployed Version
 
-You can access the deployed version of Nanny Kid Playdate application by following the link below:
+You can access the deployed version of the Nanny Kid Playdate application by following the link below:
 
 [Deployed version](https://nanny-kid-playdate-frontend.vercel.app/).
 

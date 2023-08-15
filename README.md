@@ -23,7 +23,7 @@ To initiate the project locally, adhere to the subsequent instructions for insta
 
 5 - Clone the backend repository: duplicate the backend repository content by copying from the following link: https://github.com/raissaglaucie/nanny-kid-playdate-backend.git.
 
-6 - stall the necessary dependencies: acquire the required packages by executing the command "pip install -r requirements.txt."
+6 - Install the necessary dependencies: acquire the required packages by executing the command "pip install -r requirements.txt."
 
 7 - Configure the database and apply migrations: initialize the database configuration and implement migrations using the commands "python3 manage.py migrate" or "python3 manage.py makemigrations."
 
